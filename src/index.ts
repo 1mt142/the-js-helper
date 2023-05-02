@@ -4,7 +4,7 @@
  * @returns {string}
  */
 
-const buildQueryString = (data: Record<string, any>): string => {
+export const buildQueryString = (data: Record<string, any>): string => {
   let query = "";
   let first = true;
   for (const [key, value] of Object.entries(data)) {
