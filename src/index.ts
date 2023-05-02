@@ -1,22 +1,22 @@
 /**
  * Builds a query string from an object.
- * @param data {object}
+ * @param data {Record<string, any>} can be object or nested object
  * @returns {string}
  */
 
-export const buildQueryString = (data: Record<string, any>): string => {
+const buildQueryString = (data: Record<string, any>): string => {
   let query = "";
-  let isFirst = true;
+  let first = true;
   for (const [key, value] of Object.entries(data)) {
     if (typeof value === "object" && value !== null) {
       const subQuery = buildQueryString(value);
       if (subQuery !== "") {
-        query += `${isFirst ? "" : "&"}${subQuery}`;
-        isFirst = false;
+        query += `${first ? "" : "&"}${subQuery}`;
+        first = false;
       }
     } else if (value !== null && value !== undefined) {
-      query += `${isFirst ? "?" : "&"}${key}=${encodeURIComponent(value)}`;
-      isFirst = false;
+      query += `${first ? "" : "&"}${key}=${encodeURIComponent(value)}`;
+      first = false;
     }
   }
   return query;

@@ -2,7 +2,7 @@
 node_modules/
 
 # ignore compiled files
-# dist/
+dist/
 
 # ignore environment-specific files
 .env
