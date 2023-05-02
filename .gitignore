@@ -1,9 +1,6 @@
 # ignore node_modules
 node_modules/
 
-# ignore compiled files
-dist/
-
 # ignore environment-specific files
 .env
 .env.local

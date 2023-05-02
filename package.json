@@ -1,13 +1,22 @@
 {
   "name": "the-js-helper",
-  "version": "1.0.0",
-  "description": "The the-js-helper package is a set of helper functions for building and manipulating query strings in JavaScript and TypeScript. It includes a function called buildQueryString that takes an object and returns a query string, as well as other utility functions for parsing and modifying query strings. This package is designed to make working with query strings in web applications easier and more efficient.",
-  "main": "index.js",
+  "version": "1.0.1",
+  "description": "A collection of JavaScript helper functions.",
+  "main": "dist/index.js",
+  "typings": "src/index.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc"
+    "build": "tsc && cp -R src/*.d.ts dist"
   },
   "author": "Imtiaz Khandoker",
+  "keywords": [
+    "javascript",
+    "helper",
+    "utility",
+    "function",
+    "module",
+    "library"
+  ],
   "license": "ISC",
   "repository": {
     "type": "git",
@@ -20,6 +29,6 @@
   "devDependencies": {
     "@types/node": "^18.16.3",
     "ts-node": "^10.9.1",
-    "typescript": "^5.0.4"
+    "typescript": "^4.4.4"
   }
 }
